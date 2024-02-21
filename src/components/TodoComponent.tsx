@@ -9,7 +9,7 @@ const TodoComponent: React.FC<{ todo: Todo, cb: ()=>void }>=(props)=> {
         <div className="description">
           {props.todo.description}
         </div>
-        <span className="todo__date">{props.todo.date?.getTime()}</span>
+        <span className="todo__date">{props.todo.date?.toLocaleTimeString()}</span>
         <div className='todo__id'>{props.todo.id}</div>
         <button onClick={props.cb}>{props.todo.isBookmarked ? "Unbookmark":"Bookmark"}</button>
     </div>

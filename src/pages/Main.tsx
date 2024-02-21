@@ -36,8 +36,10 @@ const Main = () => {
 
     return (
         <form className="todos" onSubmit={handleSubmit}>
-            <input type="text" value={description} onChange={handleInput}/>
-            <button type='submit'>Add ToDo</button>
+            <div className="todos__header">
+                <input placeholder='Add your note...' type="text" value={description} onChange={handleInput}/>
+                <button type='submit'>Add ToDo</button>
+            </div>
             {todos.map((t)=><TodoComponent key={uuidv4()} todo={t} cb={handleBookmarking(t.id)}/>)}
         </form>
     )

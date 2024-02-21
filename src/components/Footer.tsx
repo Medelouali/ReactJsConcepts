@@ -1,9 +1,10 @@
 import { FunctionComponent } from "react";
-
-const person: { name: string, age: number }={ name: "toto", age: 22 };
+import "./todo.css";
 
 const Footer:FunctionComponent=()=>{
-    return <div className="footer">My name is {person.name} and I am {person.age} years old</div>
+    return <div className="footer">
+        <p>Made with passion for scrafting impressive uis</p>
+    </div>
 }
 
 export default Footer;

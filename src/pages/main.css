@@ -1,3 +1,29 @@
 .todos{
     overflow-y: auto;
+    position: relative;
+}
+
+.todos__header{
+    display: grid;
+    grid-template-columns: 50% auto;
+    gap: 0 1rem;
+    margin: 0.3rem 0;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding: 0.2rem 0;
+}
+
+.todos__header button{
+    width: max-content;
+    border-radius: 0.5rem;
+    outline: none;
+    border: 1px solid violet;
+}
+
+.todos__header input{
+    border-radius: 0.5rem;
+    outline: none;
+    border: 1px solid violet;
+    padding: 0.5rem 1rem;
 }
