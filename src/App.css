@@ -1,0 +1,11 @@
+.my__app{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: calc(100vh - 2rem);
+  padding: 1rem;
+  background-color: #f8f8ff;
+}
+
+.my__app > div{
+  width: 100%;
+}

@@ -1,0 +1,43 @@
+notes
+ 
+Contrats:
+COntrat particulier(one to one), 
+professionel(one ), 
+entreprise(many to one): remise d'ordre, 
+remise d'ordre
+
+Compte:
+est lié a un contrat(identifiant rc)
+-attrs:
+Rib(23 chars), 
+[Code Banque: 5][Code Agence: 5][N de compte][Clé de controle:2]
+	
+IBAN min 27
+[Code pays: MA][clé Controle][RIB]
+
+Code Banque 5 chars: id de la banque f domestique(00014)
+Code Agnece 5 chars: id de l'agnece f domestique/banque
+
+N de compte: 11 chars, id du compte f la banque
+
+Code BIC/Code Swift (8 ou 11 chars):
+	Code BIC/Swift: nom_banque, code pays, code_localisation, 
+	code filiale(optionel: )
+	[CIHM][MA][MC] 
+
+Clé de controle: valid ou pas
+
+Virement:
+	mn num compte donneur d'ordere 1 vers benficiare
+Virement domestique: compte a compte(rattache: f la meme contrats
+), vers bene intern(fnafss la banque, n de compte est suffi) ,
+	vers confrere(rib kaml dyal banque o5ra)
+Vire internationale:
+
+Prélèvment:
+Compte a créditer(donneur d'ordre) vers compte a débiter(
+beneficaire)
+
+
+
+

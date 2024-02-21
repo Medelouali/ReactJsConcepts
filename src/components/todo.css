@@ -1,0 +1,23 @@
+
+.todo{
+    background-color: white;
+    padding: 0.5rem;
+    margin: 0.5rem 0.5rem;
+}
+
+.todo__id{
+    font-size: small;
+}
+
+.todo__marked{
+    background-color: black;
+    color: yellow;
+    border-radius: 0.5rem;
+}
+
+.todo > button{
+    padding: 0.1rem 1rem;
+    border-radius: 0.2rem 1rem;
+    outline: none;
+    border: none;
+}
