@@ -28,11 +28,6 @@ export class Hello extends Component<HelloProps, HelloState> {
         this.setState(()=>({ ...this.state, isTodoMounted: false }))
     }
 
-    static getDerivedStateFromProps(props: HelloProps, state: HelloState){
-        console.log("getDrivedStateFromProps was Called");
-        return { counter: state.counter+props.age, isTodoMounted: state.isTodoMounted }
-    }
-
     render() {
         console.log("render was Called");
         return (
@@ -41,40 +36,6 @@ export class Hello extends Component<HelloProps, HelloState> {
                 { !!this.state.isTodoMounted && <Todo description='Today is a new day' isBookmarked={false} label='New Todo'/> }
             </div>
         )
-    }
-
-    componentDidMount(): void {
-        console.log("componentDidMount was Called");
-    }
-
-    // Now the updating phase methods
-    
-    // getDerivedStateFromProps is called first
-    
-    shouldComponentUpdate(nextProps: Readonly<HelloProps>, nextState: Readonly<HelloState>, nextContext: any): boolean {
-        console.log("shouldComponentUpdate is called");
-        console.log("nextProps Value: " + nextProps);
-        console.log("nextState Value: " + nextState);
-        return true;
-    }
-
-    // render called here
-
-    getSnapshotBeforeUpdate(prevProps: Readonly<HelloProps>, prevState: Readonly<HelloState>) {
-        console.log("The props before the update: "+prevProps);
-        console.log("The state before the update: "+prevState);
-        return null;
-    }
-
-    componentDidUpdate(prevProps: Readonly<HelloProps>, prevState: Readonly<HelloState>, snapshot?: any): void {
-        console.log("The props before the update: "+prevProps);
-        console.log("The state before the update: "+prevState);
-        console.log("The snapshot: "+snapshot);
-    }
-
-    // The unmounting phase 
-    componentWillUnmount(): void {
-        console.log("The hello component has unmounted");
     }
 
 }
