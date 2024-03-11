@@ -21,7 +21,6 @@ export class Hello extends Component<HelloProps, HelloState> {
             isTodoMounted: true
         } as HelloState;
         this.unmountComponent=this.unmountComponent.bind(this);
-        console.log("constructor was Called");
     }
 
     unmountComponent(){
@@ -29,7 +28,7 @@ export class Hello extends Component<HelloProps, HelloState> {
     }
 
     render() {
-        console.log("render was Called");
+        console.log("render of Hello was Called");
         return (
             <div className="">
                 <button onClick={this.unmountComponent}>Click button to unmount todo</button>
