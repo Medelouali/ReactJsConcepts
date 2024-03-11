@@ -1,0 +1,17 @@
+In react the component passes from 3 phases
+1/ Mounting
+* contructor
+* getDerivedStateFromProps
+* render method call
+* componentDidMount
+
+2/ Updating
+* getDerivedStateFromProps
+* shouldComponentMount
+* render
+* getSnapshotBeforeUpdate
+* componentDidUpdate
+
+3/ Unmounting
+* componentWillUnmount
+
